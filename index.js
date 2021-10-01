@@ -21,6 +21,7 @@ if (!fs.existsSync(outputDir) && fs.mkdirSync(outputDir, { recursive: true })) {
   // eslint-disable-next-line no-use-before-define
   sortDir();
 } else {
+  // eslint-disable-next-line no-console
   console.info('Директория уже существует!');
   process.exit(1);
 }
@@ -60,6 +61,7 @@ function sortDir() {
           count -= 1;
 
           if (isDel === 'yes' && count === 0) {
+            // eslint-disable-next-line no-console
             console.info('Удаление исходной директории!');
             fs.rmdirSync(inputDir, {
               recursive: true,
