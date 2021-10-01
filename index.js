@@ -40,7 +40,6 @@ function sortDir() {
         count += 1;
       }
     });
-    // console.log(count)
   };
 
   const readDir = (dir) => {
